@@ -1,0 +1,1306 @@
+{
+  "dataset": {
+    "rows": 244828,
+    "date_min": "2023-11-02",
+    "date_max": "2024-03-24",
+    "analysis_window": "2024-02-13 .. 2024-03-23",
+    "rows_in_window": 242360,
+    "rows_before_window": 283,
+    "hourly_share_pct": 57.56571960723447,
+    "countries": 213,
+    "category_counts": {
+      "Other": 47955,
+      "Web & Software Dev": 47794,
+      "Design & Creative": 34576,
+      "Video & Audio": 26980,
+      "Writing & Translation": 21257,
+      "Social Media": 13332,
+      "Admin & Virtual Assistant": 12961,
+      "Marketing & SEO": 12345,
+      "Sales & Lead Gen": 10183,
+      "AI & Automation": 7543,
+      "Data & Analytics": 7180,
+      "Customer Support": 2722
+    },
+    "hourly_rate_valid": 102036,
+    "budget_valid": 103814,
+    "hourly_outliers_removed": 386,
+    "budget_outliers_removed": 77
+  },
+  "task1": {
+    "hourly": {
+      "n": 102036,
+      "n_keywords_tested": 289,
+      "n_significant_p001": 206,
+      "holdout_r2_all_keywords": 0.26045360037294774,
+      "top_positive": [
+        {
+          "keyword": "consultant",
+          "n_titles": 905,
+          "pearson_r_log": 0.075,
+          "median_with": 40.0,
+          "median_without": 22.5,
+          "median_ratio": 1.778
+        },
+        {
+          "keyword": "tax",
+          "n_titles": 652,
+          "pearson_r_log": 0.07,
+          "median_with": 50.0,
+          "median_without": 22.5,
+          "median_ratio": 2.222
+        },
+        {
+          "keyword": "videographer",
+          "n_titles": 408,
+          "pearson_r_log": 0.065,
+          "median_with": 42.5,
+          "median_without": 22.5,
+          "median_ratio": 1.889
+        },
+        {
+          "keyword": "consultation",
+          "n_titles": 339,
+          "pearson_r_log": 0.057,
+          "median_with": 48.5,
+          "median_without": 22.5,
+          "median_ratio": 2.156
+        },
+        {
+          "keyword": "engineer",
+          "n_titles": 1529,
+          "pearson_r_log": 0.055,
+          "median_with": 30.0,
+          "median_without": 22.5,
+          "median_ratio": 1.333
+        },
+        {
+          "keyword": "expert",
+          "n_titles": 7187,
+          "pearson_r_log": 0.052,
+          "median_with": 25.0,
+          "median_without": 22.5,
+          "median_ratio": 1.111
+        },
+        {
+          "keyword": "developer",
+          "n_titles": 7773,
+          "pearson_r_log": 0.051,
+          "median_with": 25.0,
+          "median_without": 22.5,
+          "median_ratio": 1.111
+        },
+        {
+          "keyword": "photographer",
+          "n_titles": 338,
+          "pearson_r_log": 0.047,
+          "median_with": 37.5,
+          "median_without": 22.5,
+          "median_ratio": 1.667
+        },
+        {
+          "keyword": "design",
+          "n_titles": 4664,
+          "pearson_r_log": 0.045,
+          "median_with": 25.0,
+          "median_without": 22.5,
+          "median_ratio": 1.111
+        },
+        {
+          "keyword": "senior",
+          "n_titles": 954,
+          "pearson_r_log": 0.045,
+          "median_with": 30.5,
+          "median_without": 22.5,
+          "median_ratio": 1.356
+        }
+      ],
+      "top_negative": [
+        {
+          "keyword": "assistant",
+          "n_titles": 4231,
+          "pearson_r_log": -0.217,
+          "median_with": 8.5,
+          "median_without": 22.5,
+          "median_ratio": 0.378
+        },
+        {
+          "keyword": "virtual",
+          "n_titles": 2699,
+          "pearson_r_log": -0.192,
+          "median_with": 7.5,
+          "median_without": 22.5,
+          "median_ratio": 0.333
+        },
+        {
+          "keyword": "va",
+          "n_titles": 783,
+          "pearson_r_log": -0.132,
+          "median_with": 6.0,
+          "median_without": 22.5,
+          "median_ratio": 0.267
+        },
+        {
+          "keyword": "lead",
+          "n_titles": 1577,
+          "pearson_r_log": -0.105,
+          "median_with": 10.0,
+          "median_without": 22.5,
+          "median_ratio": 0.444
+        },
+        {
+          "keyword": "cold",
+          "n_titles": 1051,
+          "pearson_r_log": -0.097,
+          "median_with": 8.0,
+          "median_without": 22.5,
+          "median_ratio": 0.356
+        },
+        {
+          "keyword": "generation",
+          "n_titles": 1081,
+          "pearson_r_log": -0.092,
+          "median_with": 9.5,
+          "median_without": 22.5,
+          "median_ratio": 0.422
+        },
+        {
+          "keyword": "entry",
+          "n_titles": 994,
+          "pearson_r_log": -0.089,
+          "median_with": 9.75,
+          "median_without": 22.5,
+          "median_ratio": 0.433
+        },
+        {
+          "keyword": "appointment",
+          "n_titles": 778,
+          "pearson_r_log": -0.086,
+          "median_with": 8.0,
+          "median_without": 22.5,
+          "median_ratio": 0.356
+        },
+        {
+          "keyword": "customer",
+          "n_titles": 1118,
+          "pearson_r_log": -0.084,
+          "median_with": 10.0,
+          "median_without": 22.5,
+          "median_ratio": 0.444
+        },
+        {
+          "keyword": "social",
+          "n_titles": 4031,
+          "pearson_r_log": -0.081,
+          "median_with": 16.5,
+          "median_without": 22.5,
+          "median_ratio": 0.733
+        }
+      ]
+    },
+    "fixed": {
+      "n": 103814,
+      "n_keywords_tested": 272,
+      "n_significant_p001": 184,
+      "holdout_r2_all_keywords": 0.1991836707015594,
+      "top_positive": [
+        {
+          "keyword": "development",
+          "n_titles": 2221,
+          "pearson_r_log": 0.099,
+          "median_with": 300.0,
+          "median_without": 100.0,
+          "median_ratio": 3.0
+        },
+        {
+          "keyword": "developer",
+          "n_titles": 5944,
+          "pearson_r_log": 0.091,
+          "median_with": 150.0,
+          "median_without": 100.0,
+          "median_ratio": 1.5
+        },
+        {
+          "keyword": "sales",
+          "n_titles": 1402,
+          "pearson_r_log": 0.074,
+          "median_with": 250.0,
+          "median_without": 100.0,
+          "median_ratio": 2.5
+        },
+        {
+          "keyword": "build",
+          "n_titles": 1734,
+          "pearson_r_log": 0.064,
+          "median_with": 200.0,
+          "median_without": 100.0,
+          "median_ratio": 2.0
+        },
+        {
+          "keyword": "expensify",
+          "n_titles": 491,
+          "pearson_r_log": 0.064,
+          "median_with": 500.0,
+          "median_without": 100.0,
+          "median_ratio": 5.0
+        },
+        {
+          "keyword": "engineer",
+          "n_titles": 645,
+          "pearson_r_log": 0.059,
+          "median_with": 300.0,
+          "median_without": 100.0,
+          "median_ratio": 3.0
+        },
+        {
+          "keyword": "manager",
+          "n_titles": 1536,
+          "pearson_r_log": 0.055,
+          "median_with": 200.0,
+          "median_without": 100.0,
+          "median_ratio": 2.0
+        },
+        {
+          "keyword": "stack",
+          "n_titles": 720,
+          "pearson_r_log": 0.053,
+          "median_with": 300.0,
+          "median_without": 100.0,
+          "median_ratio": 3.0
+        },
+        {
+          "keyword": "app",
+          "n_titles": 4196,
+          "pearson_r_log": 0.053,
+          "median_with": 110.0,
+          "median_without": 100.0,
+          "median_ratio": 1.1
+        },
+        {
+          "keyword": "web",
+          "n_titles": 2568,
+          "pearson_r_log": 0.052,
+          "median_with": 150.0,
+          "median_without": 100.0,
+          "median_ratio": 1.5
+        }
+      ],
+      "top_negative": [
+        {
+          "keyword": "need",
+          "n_titles": 5731,
+          "pearson_r_log": -0.083,
+          "median_with": 50.0,
+          "median_without": 100.0,
+          "median_ratio": 0.5
+        },
+        {
+          "keyword": "speakers",
+          "n_titles": 515,
+          "pearson_r_log": -0.077,
+          "median_with": 10.0,
+          "median_without": 100.0,
+          "median_ratio": 0.1
+        },
+        {
+          "keyword": "recording",
+          "n_titles": 704,
+          "pearson_r_log": -0.074,
+          "median_with": 15.0,
+          "median_without": 100.0,
+          "median_ratio": 0.15
+        },
+        {
+          "keyword": "logo",
+          "n_titles": 3458,
+          "pearson_r_log": -0.069,
+          "median_with": 50.0,
+          "median_without": 100.0,
+          "median_ratio": 0.5
+        },
+        {
+          "keyword": "fix",
+          "n_titles": 1040,
+          "pearson_r_log": -0.058,
+          "median_with": 30.0,
+          "median_without": 100.0,
+          "median_ratio": 0.3
+        },
+        {
+          "keyword": "english",
+          "n_titles": 2237,
+          "pearson_r_log": -0.056,
+          "median_with": 40.0,
+          "median_without": 100.0,
+          "median_ratio": 0.4
+        },
+        {
+          "keyword": "edit",
+          "n_titles": 851,
+          "pearson_r_log": -0.056,
+          "median_with": 25.0,
+          "median_without": 100.0,
+          "median_ratio": 0.25
+        },
+        {
+          "keyword": "quick",
+          "n_titles": 722,
+          "pearson_r_log": -0.054,
+          "median_with": 25.0,
+          "median_without": 100.0,
+          "median_ratio": 0.25
+        },
+        {
+          "keyword": "image",
+          "n_titles": 940,
+          "pearson_r_log": -0.051,
+          "median_with": 30.0,
+          "median_without": 100.0,
+          "median_ratio": 0.3
+        },
+        {
+          "keyword": "thumbnail",
+          "n_titles": 615,
+          "pearson_r_log": -0.051,
+          "median_with": 20.0,
+          "median_without": 100.0,
+          "median_ratio": 0.2
+        }
+      ]
+    }
+  },
+  "task2": {
+    "window": "13 Feb - 18 Mar 2024 (5 full weeks)",
+    "categories": [
+      {
+        "category": "Customer Support",
+        "share_first_week": 0.0104,
+        "share_last_week": 0.0122,
+        "growth_pct": 16.8465,
+        "slope_pp_per_week": 0.0246,
+        "p_value": 0.3845,
+        "total_postings": 2340,
+        "status": "Stable"
+      },
+      {
+        "category": "Video & Audio",
+        "share_first_week": 0.1077,
+        "share_last_week": 0.1135,
+        "growth_pct": 5.3853,
+        "slope_pp_per_week": 0.2291,
+        "p_value": 0.0059,
+        "total_postings": 23120,
+        "status": "Emerging"
+      },
+      {
+        "category": "AI & Automation",
+        "share_first_week": 0.0311,
+        "share_last_week": 0.0324,
+        "growth_pct": 4.157,
+        "slope_pp_per_week": 0.0457,
+        "p_value": 0.2229,
+        "total_postings": 6483,
+        "status": "Stable"
+      },
+      {
+        "category": "Web & Software Dev",
+        "share_first_week": 0.1937,
+        "share_last_week": 0.1975,
+        "growth_pct": 1.9746,
+        "slope_pp_per_week": 0.1099,
+        "p_value": 0.2206,
+        "total_postings": 41033,
+        "status": "Stable"
+      },
+      {
+        "category": "Social Media",
+        "share_first_week": 0.0547,
+        "share_last_week": 0.0557,
+        "growth_pct": 1.7703,
+        "slope_pp_per_week": 0.0687,
+        "p_value": 0.0863,
+        "total_postings": 11542,
+        "status": "Stable"
+      },
+      {
+        "category": "Design & Creative",
+        "share_first_week": 0.1418,
+        "share_last_week": 0.1441,
+        "growth_pct": 1.623,
+        "slope_pp_per_week": 0.11,
+        "p_value": 0.0525,
+        "total_postings": 29855,
+        "status": "Stable"
+      },
+      {
+        "category": "Other",
+        "share_first_week": 0.1912,
+        "share_last_week": 0.1927,
+        "growth_pct": 0.8149,
+        "slope_pp_per_week": 0.0928,
+        "p_value": 0.2453,
+        "total_postings": 41216,
+        "status": "Stable"
+      },
+      {
+        "category": "Marketing & SEO",
+        "share_first_week": 0.0504,
+        "share_last_week": 0.0502,
+        "growth_pct": -0.4725,
+        "slope_pp_per_week": -0.0269,
+        "p_value": 0.5022,
+        "total_postings": 10574,
+        "status": "Stable"
+      },
+      {
+        "category": "Sales & Lead Gen",
+        "share_first_week": 0.0419,
+        "share_last_week": 0.0412,
+        "growth_pct": -1.6393,
+        "slope_pp_per_week": -0.0044,
+        "p_value": 0.9167,
+        "total_postings": 8698,
+        "status": "Stable"
+      },
+      {
+        "category": "Data & Analytics",
+        "share_first_week": 0.0299,
+        "share_last_week": 0.0283,
+        "growth_pct": -5.2824,
+        "slope_pp_per_week": -0.0425,
+        "p_value": 0.2086,
+        "total_postings": 6168,
+        "status": "Stable"
+      },
+      {
+        "category": "Admin & Virtual Assistant",
+        "share_first_week": 0.055,
+        "share_last_week": 0.0518,
+        "growth_pct": -5.8914,
+        "slope_pp_per_week": -0.1434,
+        "p_value": 0.0327,
+        "total_postings": 11271,
+        "status": "Declining"
+      },
+      {
+        "category": "Writing & Translation",
+        "share_first_week": 0.0922,
+        "share_last_week": 0.0805,
+        "growth_pct": -12.7406,
+        "slope_pp_per_week": -0.4636,
+        "p_value": 0.0003,
+        "total_postings": 18762,
+        "status": "Declining"
+      }
+    ],
+    "emerging_keywords": [
+      {
+        "keyword": "crypto",
+        "postings": 874,
+        "share_first_week": 0.0032,
+        "share_last_week": 0.0047,
+        "growth_pct": 48.7774
+      },
+      {
+        "keyword": "js",
+        "postings": 1450,
+        "share_first_week": 0.0058,
+        "share_last_week": 0.0078,
+        "growth_pct": 35.1227
+      },
+      {
+        "keyword": "facebook",
+        "postings": 3290,
+        "share_first_week": 0.0138,
+        "share_last_week": 0.0172,
+        "growth_pct": 24.9666
+      },
+      {
+        "keyword": "ads",
+        "postings": 4380,
+        "share_first_week": 0.0187,
+        "share_last_week": 0.022,
+        "growth_pct": 17.9094
+      },
+      {
+        "keyword": "video",
+        "postings": 11588,
+        "share_first_week": 0.0533,
+        "share_last_week": 0.0566,
+        "growth_pct": 6.3562
+      }
+    ],
+    "declining_keywords": [
+      {
+        "keyword": "general",
+        "postings": 429,
+        "share_first_week": 0.0032,
+        "share_last_week": 0.0012,
+        "growth_pct": -63.8701
+      },
+      {
+        "keyword": "writers",
+        "postings": 604,
+        "share_first_week": 0.0043,
+        "share_last_week": 0.0021,
+        "growth_pct": -50.5805
+      },
+      {
+        "keyword": "entry",
+        "postings": 1937,
+        "share_first_week": 0.0113,
+        "share_last_week": 0.0065,
+        "growth_pct": -42.6069
+      },
+      {
+        "keyword": "spanish",
+        "postings": 1472,
+        "share_first_week": 0.0083,
+        "share_last_week": 0.005,
+        "growth_pct": -40.1268
+      },
+      {
+        "keyword": "writing",
+        "postings": 1387,
+        "share_first_week": 0.0079,
+        "share_last_week": 0.0049,
+        "growth_pct": -37.5965
+      },
+      {
+        "keyword": "job",
+        "postings": 1841,
+        "share_first_week": 0.0096,
+        "share_last_week": 0.0061,
+        "growth_pct": -36.0911
+      },
+      {
+        "keyword": "document",
+        "postings": 814,
+        "share_first_week": 0.0046,
+        "share_last_week": 0.0032,
+        "growth_pct": -30.5645
+      },
+      {
+        "keyword": "data",
+        "postings": 5984,
+        "share_first_week": 0.0312,
+        "share_last_week": 0.0249,
+        "growth_pct": -19.9155
+      }
+    ]
+  },
+  "task3": {
+    "train_period": "20 Feb - 18 Mar 2024",
+    "test_period": "19 Mar - 23 Mar 2024",
+    "train_rows": 336,
+    "scores": {
+      "seasonal_naive": {
+        "MAE": 33.1,
+        "MAPE_pct": 8.311070744961915,
+        "R2": 0.9867394654790039,
+        "rank_spearman": 0.9930069930069931,
+        "top3_hit": "3/3"
+      },
+      "mean7": {
+        "MAE": 70.63614367029612,
+        "MAPE_pct": 15.105420370203035,
+        "R2": 0.9424399760371373,
+        "rank_spearman": 0.9930069930069931,
+        "top3_hit": "3/3"
+      },
+      "Ridge": {
+        "MAE": 36.91126906316519,
+        "MAPE_pct": 10.127678413068946,
+        "R2": 0.9846527918571678,
+        "rank_spearman": 0.9860139860139862,
+        "top3_hit": "3/3"
+      },
+      "GradientBoosting": {
+        "MAE": 31.558513186590123,
+        "MAPE_pct": 11.464680244689955,
+        "R2": 0.99042248413282,
+        "rank_spearman": 0.9930069930069931,
+        "top3_hit": "3/3"
+      },
+      "RandomForest": {
+        "MAE": 33.80241609167116,
+        "MAPE_pct": 11.09622083948667,
+        "R2": 0.9890330182769952,
+        "rank_spearman": 0.9790209790209792,
+        "top3_hit": "3/3"
+      },
+      "Ensemble(Ridge+seasonal_naive)": {
+        "MAE": 30.579379342311825,
+        "MAPE_pct": 8.49054366017067,
+        "R2": 0.9894720454306055,
+        "rank_spearman": 0.9930069930069931,
+        "top3_hit": "3/3"
+      }
+    },
+    "best_model": "Ensemble(Ridge+seasonal_naive)",
+    "best_ml_model": "Ridge",
+    "ranking": [
+      {
+        "category": "Other",
+        "last14_actual": 16760.0,
+        "next14_forecast": 17320.9,
+        "change_pct": 3.35,
+        "forecast_share_pct": 20.13
+      },
+      {
+        "category": "Web & Software Dev",
+        "last14_actual": 16888.0,
+        "next14_forecast": 17109.63,
+        "change_pct": 1.31,
+        "forecast_share_pct": 19.88
+      },
+      {
+        "category": "Design & Creative",
+        "last14_actual": 12203.0,
+        "next14_forecast": 12255.56,
+        "change_pct": 0.43,
+        "forecast_share_pct": 14.24
+      },
+      {
+        "category": "Video & Audio",
+        "last14_actual": 9727.0,
+        "next14_forecast": 10037.75,
+        "change_pct": 3.19,
+        "forecast_share_pct": 11.67
+      },
+      {
+        "category": "Writing & Translation",
+        "last14_actual": 6722.0,
+        "next14_forecast": 6144.97,
+        "change_pct": -8.58,
+        "forecast_share_pct": 7.14
+      },
+      {
+        "category": "Social Media",
+        "last14_actual": 4726.0,
+        "next14_forecast": 4647.2,
+        "change_pct": -1.67,
+        "forecast_share_pct": 5.4
+      },
+      {
+        "category": "Marketing & SEO",
+        "last14_actual": 4378.0,
+        "next14_forecast": 4467.73,
+        "change_pct": 2.05,
+        "forecast_share_pct": 5.19
+      },
+      {
+        "category": "Admin & Virtual Assistant",
+        "last14_actual": 4389.0,
+        "next14_forecast": 4243.05,
+        "change_pct": -3.33,
+        "forecast_share_pct": 4.93
+      },
+      {
+        "category": "Sales & Lead Gen",
+        "last14_actual": 3632.0,
+        "next14_forecast": 3669.77,
+        "change_pct": 1.04,
+        "forecast_share_pct": 4.26
+      },
+      {
+        "category": "AI & Automation",
+        "last14_actual": 2713.0,
+        "next14_forecast": 2698.83,
+        "change_pct": -0.52,
+        "forecast_share_pct": 3.14
+      },
+      {
+        "category": "Data & Analytics",
+        "last14_actual": 2507.0,
+        "next14_forecast": 2475.15,
+        "change_pct": -1.27,
+        "forecast_share_pct": 2.88
+      },
+      {
+        "category": "Customer Support",
+        "last14_actual": 990.0,
+        "next14_forecast": 979.3,
+        "change_pct": -1.08,
+        "forecast_share_pct": 1.14
+      }
+    ],
+    "roles": [
+      {
+        "role": "logo design",
+        "category": "Design & Creative",
+        "postings_observed": 657,
+        "forecast_next14": 235.3
+      },
+      {
+        "role": "video editing",
+        "category": "Video & Audio",
+        "postings_observed": 563,
+        "forecast_next14": 211.8
+      },
+      {
+        "role": "social media manager",
+        "category": "Social Media",
+        "postings_observed": 507,
+        "forecast_next14": 178.5
+      },
+      {
+        "role": "graphic design",
+        "category": "Design & Creative",
+        "postings_observed": 448,
+        "forecast_next14": 160.4
+      },
+      {
+        "role": "virtual assistant",
+        "category": "Admin & Virtual Assistant",
+        "postings_observed": 408,
+        "forecast_next14": 134.8
+      },
+      {
+        "role": "website development",
+        "category": "Web & Software Dev",
+        "postings_observed": 252,
+        "forecast_next14": 91.2
+      },
+      {
+        "role": "youtube video editing",
+        "category": "Video & Audio",
+        "postings_observed": 214,
+        "forecast_next14": 80.5
+      },
+      {
+        "role": "full stack development",
+        "category": "Web & Software Dev",
+        "postings_observed": 217,
+        "forecast_next14": 78.5
+      },
+      {
+        "role": "website design",
+        "category": "Design & Creative",
+        "postings_observed": 197,
+        "forecast_next14": 70.6
+      },
+      {
+        "role": "lead generation",
+        "category": "Sales & Lead Gen",
+        "postings_observed": 172,
+        "forecast_next14": 62.7
+      },
+      {
+        "role": "appointment setter",
+        "category": "Sales & Lead Gen",
+        "postings_observed": 153,
+        "forecast_next14": 55.8
+      },
+      {
+        "role": "data entry",
+        "category": "Admin & Virtual Assistant",
+        "postings_observed": 167,
+        "forecast_next14": 55.2
+      },
+      {
+        "role": "social media marketing",
+        "category": "Social Media",
+        "postings_observed": 150,
+        "forecast_next14": 52.8
+      },
+      {
+        "role": "wordpress development",
+        "category": "Web & Software Dev",
+        "postings_observed": 124,
+        "forecast_next14": 44.9
+      },
+      {
+        "role": "facebook ads manager",
+        "category": "Writing & Translation",
+        "postings_observed": 126,
+        "forecast_next14": 36.7
+      }
+    ]
+  },
+  "task4": {
+    "countries_with_30plus": 93,
+    "countries_with_200plus": 46,
+    "kruskal_H": 2219.9752427364024,
+    "kruskal_p": 0.0,
+    "us": {
+      "mean": 30.702511724856695,
+      "median": 25.0,
+      "n": 47975
+    },
+    "top10": [
+      {
+        "country": "Vietnam",
+        "n": 254,
+        "mean": 30.01,
+        "median": 27.5
+      },
+      {
+        "country": "Kenya",
+        "n": 369,
+        "mean": 30.86,
+        "median": 26.5
+      },
+      {
+        "country": "Poland",
+        "n": 415,
+        "mean": 27.26,
+        "median": 25.0
+      },
+      {
+        "country": "Turkey",
+        "n": 385,
+        "mean": 27.24,
+        "median": 25.0
+      },
+      {
+        "country": "Denmark",
+        "n": 418,
+        "mean": 29.47,
+        "median": 25.0
+      },
+      {
+        "country": "Saudi Arabia",
+        "n": 426,
+        "mean": 29.21,
+        "median": 25.0
+      },
+      {
+        "country": "Ukraine",
+        "n": 577,
+        "mean": 30.18,
+        "median": 25.0
+      },
+      {
+        "country": "United States",
+        "n": 47975,
+        "mean": 30.7,
+        "median": 25.0
+      },
+      {
+        "country": "Norway",
+        "n": 277,
+        "mean": 27.06,
+        "median": 24.5
+      },
+      {
+        "country": "Brazil",
+        "n": 207,
+        "mean": 26.62,
+        "median": 22.5
+      }
+    ],
+    "bottom10": [
+      {
+        "country": "Bangladesh",
+        "n": 733,
+        "mean": 24.71,
+        "median": 20.0
+      },
+      {
+        "country": "Australia",
+        "n": 5888,
+        "mean": 23.77,
+        "median": 20.0
+      },
+      {
+        "country": "Nigeria",
+        "n": 302,
+        "mean": 25.31,
+        "median": 20.0
+      },
+      {
+        "country": "Netherlands",
+        "n": 1613,
+        "mean": 22.38,
+        "median": 20.0
+      },
+      {
+        "country": "China",
+        "n": 417,
+        "mean": 23.36,
+        "median": 19.0
+      },
+      {
+        "country": "India",
+        "n": 4430,
+        "mean": 22.27,
+        "median": 18.5
+      },
+      {
+        "country": "Pakistan",
+        "n": 1440,
+        "mean": 23.13,
+        "median": 18.5
+      },
+      {
+        "country": "Japan",
+        "n": 262,
+        "mean": 19.54,
+        "median": 15.0
+      },
+      {
+        "country": "Philippines",
+        "n": 1065,
+        "mean": 24.46,
+        "median": 11.0
+      },
+      {
+        "country": "South Korea",
+        "n": 278,
+        "mean": 15.39,
+        "median": 10.0
+      }
+    ],
+    "overall_median": 22.5,
+    "overall_mean": 27.97699667096542
+  },
+  "task5": {
+    "evaluation": {
+      "queries": 400,
+      "precision_at_10": 0.6363541666666667,
+      "hit_rate_at_10": 0.965,
+      "ndcg_at_10": 0.6517098588352616,
+      "random_baseline_precision": 0.1281218938241236
+    },
+    "index_size": 244545,
+    "vocab": 35835
+  },
+  "task6": {
+    "data_end": "2024-03-23",
+    "monthly": [
+      {
+        "month": "2024-02",
+        "days_covered": 17,
+        "postings": 101711,
+        "postings_per_day": 5983,
+        "hourly_share_pct": 58.3,
+        "mean_hourly_rate": 28.03,
+        "median_fixed_budget": 100.0,
+        "remote_wording_pct": 0.56,
+        "non_us_pct": 57.1,
+        "top_category": "Web & Software Dev",
+        "postings_per_day_mom_pct": NaN,
+        "mean_hourly_rate_mom_pct": NaN,
+        "hourly_share_pct_mom_pct": NaN
+      },
+      {
+        "month": "2024-03",
+        "days_covered": 23,
+        "postings": 140649,
+        "postings_per_day": 6115,
+        "hourly_share_pct": 57.0,
+        "mean_hourly_rate": 28.01,
+        "median_fixed_budget": 100.0,
+        "remote_wording_pct": 0.57,
+        "non_us_pct": 57.1,
+        "top_category": "Web & Software Dev",
+        "postings_per_day_mom_pct": 2.2,
+        "mean_hourly_rate_mom_pct": -0.1,
+        "hourly_share_pct_mom_pct": -2.2
+      }
+    ]
+  },
+  "task7": {
+    "remote_titles": 1182,
+    "remote_share_pct": 0.5600250163459078,
+    "weekly_remote_share_pct": [
+      0.597,
+      0.547,
+      0.531,
+      0.549,
+      0.584
+    ],
+    "trend_slope_pp_per_week": -0.002358997606324709,
+    "trend_p_value": 0.8275758079534542,
+    "daily_trend_p_value": 0.33452220365984703,
+    "forecast_next4_weeks_pct": [
+      0.555,
+      0.552,
+      0.55,
+      0.547
+    ],
+    "forecast_interval_halfwidth_pp": 0.0615671497649676,
+    "remote_median_rate": 25.0,
+    "nonremote_median_rate": 22.5,
+    "rate_mannwhitney_p": 0.4164613916944431,
+    "remote_rate_n": 695,
+    "by_category": [
+      {
+        "category": "Customer Support",
+        "remote_share_pct": 3.846,
+        "remote_titles": 90
+      },
+      {
+        "category": "Sales & Lead Gen",
+        "remote_share_pct": 2.127,
+        "remote_titles": 185
+      },
+      {
+        "category": "Admin & Virtual Assistant",
+        "remote_share_pct": 1.535,
+        "remote_titles": 173
+      },
+      {
+        "category": "Other",
+        "remote_share_pct": 0.689,
+        "remote_titles": 284
+      },
+      {
+        "category": "Data & Analytics",
+        "remote_share_pct": 0.6,
+        "remote_titles": 37
+      },
+      {
+        "category": "AI & Automation",
+        "remote_share_pct": 0.463,
+        "remote_titles": 30
+      }
+    ],
+    "by_country": [
+      {
+        "country": "Japan",
+        "mean": 0.019,
+        "sum": 12,
+        "size": 647
+      },
+      {
+        "country": "Philippines",
+        "mean": 0.01,
+        "sum": 21,
+        "size": 2077
+      },
+      {
+        "country": "United States",
+        "mean": 0.009,
+        "sum": 735,
+        "size": 86236
+      },
+      {
+        "country": "Kenya",
+        "mean": 0.007,
+        "sum": 5,
+        "size": 719
+      },
+      {
+        "country": "Singapore",
+        "mean": 0.006,
+        "sum": 13,
+        "size": 2114
+      },
+      {
+        "country": "Ireland",
+        "mean": 0.006,
+        "sum": 6,
+        "size": 1050
+      },
+      {
+        "country": "Nigeria",
+        "mean": 0.005,
+        "sum": 5,
+        "size": 930
+      },
+      {
+        "country": "Turkey",
+        "mean": 0.005,
+        "sum": 5,
+        "size": 1030
+      }
+    ],
+    "nonus_share_weekly": [
+      56.73,
+      57.71,
+      57.27,
+      56.6,
+      57.46
+    ],
+    "hourly_share_weekly": [
+      58.47,
+      58.59,
+      57.08,
+      57.65,
+      56.28
+    ],
+    "weekend_share_weekly": [
+      25.21,
+      21.18,
+      21.25,
+      21.35,
+      21.13
+    ]
+  },
+  "task8": {
+    "weekly_volume_observed": [
+      35199,
+      45482,
+      43709,
+      43679,
+      42993
+    ],
+    "weekly_growth_assumptions": {
+      "pessimistic": -0.03716981554568366,
+      "base": -0.01858490777284183,
+      "optimistic": 0.01858490777284183
+    },
+    "volume_scenarios_next4w": {
+      "pessimistic": [
+        41394,
+        39856,
+        38374,
+        36948
+      ],
+      "base": [
+        42193,
+        41409,
+        40640,
+        39884
+      ],
+      "optimistic": [
+        43792,
+        44605,
+        45434,
+        46279
+      ]
+    },
+    "hourly_rate_weekly_mean": [
+      27.537410648673927,
+      28.022159959246054,
+      28.544315030504713,
+      28.06963382449967,
+      27.905474494485293
+    ],
+    "rate_slope_per_week": 0.07836015568763521,
+    "rate_slope_p": 0.5725400100685644,
+    "rate_slope_stderr": 0.12408217919848122,
+    "rate_scenarios_next4w": {
+      "pessimistic": [
+        27.86,
+        27.81,
+        27.77,
+        27.72
+      ],
+      "base": [
+        27.98,
+        28.06,
+        28.14,
+        28.22
+      ],
+      "optimistic": [
+        28.11,
+        28.31,
+        28.51,
+        28.72
+      ]
+    },
+    "category_scenarios": [
+      {
+        "category": "Web & Software Dev",
+        "share_now_pct": 19.703,
+        "trend_pp_per_week": 0.098,
+        "p_value": 0.495,
+        "base_4w": 20.093,
+        "accelerated_4w": 20.483,
+        "reversion_4w": 19.448
+      },
+      {
+        "category": "Other",
+        "share_now_pct": 19.271,
+        "trend_pp_per_week": 0.077,
+        "p_value": 0.59,
+        "base_4w": 19.58,
+        "accelerated_4w": 19.889,
+        "reversion_4w": 19.517
+      },
+      {
+        "category": "Design & Creative",
+        "share_now_pct": 14.367,
+        "trend_pp_per_week": 0.095,
+        "p_value": 0.231,
+        "base_4w": 14.749,
+        "accelerated_4w": 15.131,
+        "reversion_4w": 14.149
+      },
+      {
+        "category": "Video & Audio",
+        "share_now_pct": 11.272,
+        "trend_pp_per_week": 0.187,
+        "p_value": 0.131,
+        "base_4w": 12.018,
+        "accelerated_4w": 12.764,
+        "reversion_4w": 10.952
+      },
+      {
+        "category": "Writing & Translation",
+        "share_now_pct": 8.092,
+        "trend_pp_per_week": -0.496,
+        "p_value": 0.154,
+        "base_4w": 6.109,
+        "accelerated_4w": 4.125,
+        "reversion_4w": 8.891
+      },
+      {
+        "category": "Social Media",
+        "share_now_pct": 5.561,
+        "trend_pp_per_week": 0.066,
+        "p_value": 0.247,
+        "base_4w": 5.826,
+        "accelerated_4w": 6.091,
+        "reversion_4w": 5.47
+      },
+      {
+        "category": "Admin & Virtual Assistant",
+        "share_now_pct": 5.203,
+        "trend_pp_per_week": -0.124,
+        "p_value": 0.276,
+        "base_4w": 4.707,
+        "accelerated_4w": 4.211,
+        "reversion_4w": 5.34
+      },
+      {
+        "category": "Marketing & SEO",
+        "share_now_pct": 5.064,
+        "trend_pp_per_week": 0.022,
+        "p_value": 0.158,
+        "base_4w": 5.152,
+        "accelerated_4w": 5.24,
+        "reversion_4w": 5.008
+      },
+      {
+        "category": "Sales & Lead Gen",
+        "share_now_pct": 4.145,
+        "trend_pp_per_week": 0.02,
+        "p_value": 0.576,
+        "base_4w": 4.225,
+        "accelerated_4w": 4.304,
+        "reversion_4w": 4.124
+      },
+      {
+        "category": "AI & Automation",
+        "share_now_pct": 3.219,
+        "trend_pp_per_week": 0.045,
+        "p_value": 0.196,
+        "base_4w": 3.401,
+        "accelerated_4w": 3.583,
+        "reversion_4w": 3.073
+      },
+      {
+        "category": "Data & Analytics",
+        "share_now_pct": 2.854,
+        "trend_pp_per_week": -0.034,
+        "p_value": 0.18,
+        "base_4w": 2.719,
+        "accelerated_4w": 2.584,
+        "reversion_4w": 2.924
+      },
+      {
+        "category": "Customer Support",
+        "share_now_pct": 1.249,
+        "trend_pp_per_week": 0.043,
+        "p_value": 0.164,
+        "base_4w": 1.423,
+        "accelerated_4w": 1.596,
+        "reversion_4w": 1.105
+      }
+    ]
+  }
+}

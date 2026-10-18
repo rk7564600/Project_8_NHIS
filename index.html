@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find freelance work that fits</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#161a2b;--mute:#5d6480;--line:#dfe2ee;--acc:#3a3fb5;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#10121d;--ink:#e8eaf6;--mute:#9aa1c4;--line:#262a40;--acc:#8d92ff;--card:#171a2a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 60px;display:grid;grid-template-columns:320px 1fr;gap:28px}
+@media(max-width:820px){.wrap{grid-template-columns:1fr}}
+h1{font:600 30px/1.15 ui-serif,Georgia,serif;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mute);margin:0 0 20px;font-size:15px}
+aside{align-self:start;position:sticky;top:20px}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 4px}
+textarea,select,input[type=number]{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
+textarea{min-height:88px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chk{display:flex;gap:8px;align-items:center;margin-top:14px;font-size:14px}.chk input{width:auto}
+button{margin-top:18px;width:100%;padding:11px;border:0;border-radius:6px;background:var(--acc);color:#fff;font:600 15px inherit;cursor:pointer}
+button:disabled{opacity:.6}
+.meta{font-size:13px;color:var(--mute);margin:0 0 12px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+.job a{color:var(--ink);font-weight:600;text-decoration:none;font-size:17px}.job a:hover{color:var(--acc);text-decoration:underline}
+.info{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:6px;font-size:13px;color:var(--mute)}
+.pay{font-family:ui-monospace,Menlo,monospace;color:var(--ink)}
+.chips{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}.chips span{font-size:12px;padding:2px 8px;border:1px solid var(--line);border-radius:99px;color:var(--acc)}
+.empty{padding:30px;border:1px dashed var(--line);border-radius:8px;color:var(--mute)}
+nav{margin-top:22px;font-size:14px}nav a{color:var(--acc);margin-right:14px}
+</style></head><body><div class="wrap">
+<aside><h1>Find freelance work that fits</h1>
+<p class="sub">Describe what you do. We rank recent postings by how closely their titles match, with a small boost for newer ones.</p>
+<form id="f">
+<label for="skills">Skills or role</label><textarea id="skills" placeholder="e.g. python flask api developer"></textarea>
+<div class="row"><div><label for="job_type">Contract</label><select id="job_type"><option value="">Any</option><option>hourly</option><option>fixed</option></select></div>
+<div><label for="category">Category</label><select id="category"><option value="">Any</option></select></div></div>
+<label for="country">Client country</label><select id="country"><option value="">Any</option></select>
+<div class="row"><div><label for="min_hourly">Min $/hr</label><input type="number" id="min_hourly" min="0"></div>
+<div><label for="min_budget">Min fixed $</label><input type="number" id="min_budget" min="0"></div></div>
+<label class="chk"><input type="checkbox" id="remote_only">Only titles that say "remote"</label>
+<button id="go">Recommend jobs</button></form>
+<nav><a href="/dashboard">Market dashboard</a><a href="/interactive/task4_hourly_rate_map.html">Rate map</a></nav></aside>
+<main><div id="meta" class="meta"></div><div id="out"><div class="empty">Enter your skills and press Recommend. Leave skills empty to see the newest postings that match your filters.</div></div></main>
+</div><script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+fetch("/api/meta").then(r=>r.json()).then(m=>{
+ m.categories.forEach(c=>$("category").add(new Option(c,c)));
+ m.countries.forEach(c=>$("country").add(new Option(c,c)));
+ $("meta").textContent=`Index covers postings from ${m.date_min} to ${m.date_max}.`;});
+$("f").addEventListener("submit",async e=>{
+ e.preventDefault();$("go").disabled=true;
+ const body={skills:$("skills").value,job_type:$("job_type").value,category:$("category").value,country:$("country").value,
+  min_hourly:$("min_hourly").value,min_budget:$("min_budget").value,remote_only:$("remote_only").checked,top_k:15};
+ try{const r=await fetch("/api/recommend",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+  const d=await r.json();if(!r.ok)throw new Error(d.error||r.status);
+  $("meta").textContent=`${d.count} recommendation${d.count==1?"":"s"}`;
+  $("out").innerHTML=d.count?d.results.map(j=>`<div class="job"><a href="${esc(j.link)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+   <div class="info"><span class="pay">${esc(j.pay)}</span><span>${esc(j.country)}</span><span>${esc(j.category)}</span><span>${esc(j.published.slice(0,10))}</span><span>match ${(j.score*100).toFixed(0)}</span></div>
+   ${j.matched_terms.length?`<div class="chips">${j.matched_terms.map(t=>`<span>${esc(t)}</span>`).join("")}</div>`:""}</div>`).join(""):
+   '<div class="empty">No postings matched. Try broader words or relax a filter.</div>';
+ }catch(err){$("out").innerHTML=`<div class="empty">Something went wrong: ${esc(err.message)}</div>`}
+ $("go").disabled=false;});
+</script></body></html>

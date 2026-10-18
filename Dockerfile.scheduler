@@ -1,0 +1,8 @@
+# Batch service: runs the full analysis pipeline at start-up (if needed) and on the 1st of every month
+FROM python:3.12-slim
+ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 DATA_PATH=/app/data/data.csv OUTPUT_DIR=/app/output
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY jobmarket ./jobmarket
+CMD ["python", "-m", "jobmarket.scheduler"]

@@ -1,0 +1,27 @@
+services:
+  app:
+    build: { context: ., dockerfile: Dockerfile.app }
+    volumes:
+      - ./data:/app/data:ro            # put the monthly data.csv here
+      - outputs:/app/output            # figures, metrics.json, dashboard.html (written by scheduler)
+    expose: ["8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 90s                # index build on 245k postings
+    restart: unless-stopped
+  scheduler:
+    build: { context: ., dockerfile: Dockerfile.scheduler }
+    volumes:
+      - ./data:/app/data:ro
+      - outputs:/app/output
+    restart: unless-stopped
+  web:
+    build: ./nginx
+    ports: ["8080:80"]
+    depends_on: [app]
+    restart: unless-stopped
+volumes:
+  outputs:
